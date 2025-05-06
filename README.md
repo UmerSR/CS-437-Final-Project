@@ -35,8 +35,9 @@ Deliverables/
   ├── Deliverable 2 - Dataset Selection.ipynb           # Notebook for dataset selection and exploration
   ├── Deliverable 3 - Baseline Model.ipynb              # Initial baseline model implementation and evaluation
   ├── Deliverable 4 - First Improvement.ipynb           # First improvement over baseline with analysis
-  ├── Deliverable 5 - Final Paper.pdf                   # Final project report
-  └── Deliverable 5 - Second Improvement.ipynb          # Second improvement over model with results
+  ├── Deliverable 5 - Second Improvement.ipynb          # Second improvement over model with results
+  └── Deliverable 6 - Final Paper.pdf                   # Final project report
+
 Data/
   └── filtered_oasis_1.csv                              # Contains metadata information regarding OASIS-I patients
 ```
@@ -136,6 +137,10 @@ Improvement primarily focuses on binary classification (Alzheimer's vs. Non-Alzh
 | Vanilla BioMedCLIP    | 47.71%     | 0.4899     |
 | Fine-tuned BioMedCLIP | **93.14%** | **0.9751** |
 
+#### Per-class Classification Results:
+
+![Binary visualizations](../Images/Binary Results.png)
+
 ### Multi-Class Classification
 
 | Model                            | Accuracy   | AUC        |
@@ -144,11 +149,17 @@ Improvement primarily focuses on binary classification (Alzheimer's vs. Non-Alzh
 | Fine-tuned BioMedCLIP (ViT/B-16) | **85.27%** | **0.9654** |
 | Fine-tuned BioMedCLIP (VGG-16)   | 75.19%     | 0.9517     |
 
+#### Per-class Classification Results:
+
+![Multiclass visualizations](../Images/Multiclass Results.png)
+
 ## Interpretability (Eigen-CAM)
 
 - Eigen-CAM used to visualize spatial attention and interpret model predictions.
 - Highlights clinically relevant regions such as hippocampal shrinkage, ventricular enlargement, and cortical thinning.
 - VGG-16-based models provided more clinically relevant activations compared to ViT-based models.
+
+![Eigen-CAM visualization](../Images/Eigen-CAM.png)
 
 ## Limitations
 
