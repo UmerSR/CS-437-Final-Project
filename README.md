@@ -160,7 +160,7 @@ Improvement primarily focuses on binary classification (Alzheimer's vs. Non-Alzh
 - Eigen-CAM used to visualize spatial attention and interpret model predictions.
 - Highlights clinically relevant regions such as hippocampal shrinkage, ventricular enlargement, and cortical thinning.
 - VGG-16-based models provided more clinically relevant activations compared to ViT-based models.
-- See diagram below (right: ViT/B-16, left: VGG-16):
+- See diagram below (left: ViT/B-16, right: VGG-16):
 
 ![Eigen-CAM visualization](Images/Eigen-CAM.png)
 
