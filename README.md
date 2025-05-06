@@ -17,7 +17,7 @@ We propose a multimodal approach employing BioMedCLIP, enhanced by domain-specif
 
   - [Data Preprocessing](#data-preprocessing)
   - [Caption Generation](#caption-generation)
-  - [Model Architecture](#model-architecture)
+  - [Key Innovations](#key-innovations)
   - [Training Setup](#training-setup)
 
 - [Results](#results)
@@ -40,6 +40,8 @@ Deliverables/
 
 Data/
   └── filtered_oasis_1.csv                              # Contains metadata information regarding OASIS-I patients
+
+Images/                                                 # Contain images for README.md
 ```
 
 ## Installation
@@ -61,7 +63,7 @@ Run all cells to achieve results.
 
 ## Dataset
 
-The study uses the [OASIS-I dataset](https://www.kaggle.com/datasets/ninadaithal/imagesoasis), containing approximately 80,000 T1-weighted MRI images classified into five diagnostic categories:
+The study uses the [OASIS-I dataset](https://www.kaggle.com/datasets/ninadaithal/imagesoasis), containing approximately 80,000 T1-weighted MRI images of around 400 patients classified into five diagnostic categories:
 
 - Non-Demented
 - Very Mild Dementia
@@ -139,7 +141,7 @@ Improvement primarily focuses on binary classification (Alzheimer's vs. Non-Alzh
 
 #### Per-class Classification Results:
 
-![Binary visualizations](../Images/Binary Results.png)
+![Binary visualizations](Images/Binary%20Results.png)
 
 ### Multi-Class Classification
 
@@ -151,15 +153,16 @@ Improvement primarily focuses on binary classification (Alzheimer's vs. Non-Alzh
 
 #### Per-class Classification Results:
 
-![Multiclass visualizations](../Images/Multiclass Results.png)
+![Multiclass visualizations](Images/Multiclass%20Results.png)
 
 ## Interpretability (Eigen-CAM)
 
 - Eigen-CAM used to visualize spatial attention and interpret model predictions.
 - Highlights clinically relevant regions such as hippocampal shrinkage, ventricular enlargement, and cortical thinning.
 - VGG-16-based models provided more clinically relevant activations compared to ViT-based models.
+- See diagram below (right: ViT/B-16, left: VGG-16):
 
-![Eigen-CAM visualization](../Images/Eigen-CAM.png)
+![Eigen-CAM visualization](Images/Eigen-CAM.png)
 
 ## Limitations
 
